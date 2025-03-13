@@ -51,3 +51,84 @@ ul {
 }
 
 /* ============= PROJECT CSS =============== */
+
+.container {
+  padding: 2rem;
+  display: grid;
+  row-gap: 1.5rem;
+  height: 10rem;
+
+  h4 {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  .form {
+    display: flex;
+    align-items: center;
+
+    input {
+      &[type='text'] {
+        padding: 0.5rem 0.75rem;
+        border-color: transparent;
+        border-radius: 4px;
+        font-size: 1rem;
+        max-width: 10rem;
+      }
+
+      &[type='color'] {
+        background-color: white;
+        border-color: white;
+
+        height: 100%;
+        cursor: pointer;
+      }
+    }
+
+    .btn {
+      text-transform: capitalize;
+      border-radius: 0;
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+      align-self: stretch;
+      border: transparent;
+      padding: 0.5rem 0.75rem;
+      color: white;
+      font-weight: 700;
+      cursor: pointer;
+    }
+  }
+}
+
+.colors {
+  min-height: calc(100vh - 10rem);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(223.33px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(96px, 1fr));
+
+  .color {
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    font-weight: 500;
+
+    &.colorLight {
+      color: white;
+    }
+
+    p {
+      margin-bottom: 0.75rem;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    grid-template-columns: auto 1fr;
+    column-gap: 2rem;
+    align-items: center;
+
+    .form {
+      height: 2.5rem;
+    }
+  }
+}
